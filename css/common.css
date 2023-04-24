@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fafafa;
+  color: #212121;
+  line-height: 1.5;
+}
+
+input {
+  padding: 8px;
+  font: inherit;
+}
+
+button {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+/*task-03
+------------------------------------------
+flex-wrap: wrap pozwala elementom na przewijanie w dół, gdy zajmują więcej miejsca niż jest dostępne na ekranie. justify-content: space-between rozdziela elementy równomiernie po szerokości.
+*/
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+}
+/*określa szerokość każdego elementu w galerii. Używamy calc(33.33% - 10px) do ustawienia szerokości elementów na 1/3 szerokości kontenera minus 10 pikseli marginesu na lewo i prawo. margin-bottom: 20px dodaje margines na dole każdego elementu. Używamy box-sizing: border-box do uwzględnienia marginesu w szerokości elementu.*/
+.gallery-item {
+  width: calc(33.33% - 10px);
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+/*skalowanie obrazków, aby pasowały do ich kontenera i zachować proporcje.*/
+.gallery-item img {
+  width: 100%;
+  height: auto;
+}
+
+
+
+
